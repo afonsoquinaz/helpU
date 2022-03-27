@@ -8,8 +8,39 @@
 import SwiftUI
 
 struct Needers: View {
+   
+    @ObservedObject var model = ViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+       
+        VStack {
+          
+        List(model.list1){ item in
+            
+          
+            
+            ZStack{
+               
+                
+                RoundedRectangle(cornerRadius: 25, style: .continuous).fill(Color.pink).shadow(radius: 20)
+            VStack {
+                        
+                UserTagView(userId: item.userId)
+                APostView(textPost: item.postText, day: item.day, hour: item.hour, minute: item.minute, location: item.location)
+            }.frame(width: 350, height: 250)
+            .multilineTextAlignment(.center)
+
+            }
+                  
+        }
+        }
+        
+       
+    }
+    
+    init(){
+        model.getNeederData()
     }
 }
 

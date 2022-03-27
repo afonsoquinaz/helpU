@@ -6,10 +6,21 @@
 //
 
 import SwiftUI
+import Firebase
+import CoreLocation
 
 struct ContentView: View {
+    
+    @ObservedObject var model = ViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(model.list){ item in
+            Text(item.userId)
+        }
+    }
+    
+    init(){
+        model.getHelperData()
     }
 }
 

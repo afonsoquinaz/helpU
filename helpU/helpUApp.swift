@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import Firebase
+
 
 @main
 struct helpUApp: App {
+    
+    init(){
+        FirebaseApp.configure()
+        //GMSServices.provideAPIKey("AIzaSyDmwZMsAU1pxByiHmvaoDdqelJ4L_i9ACY")
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeView().ignoresSafeArea()
+            
         }
     }
 }

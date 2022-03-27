@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ChatView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Chat View")
+        Image(String("chatBG")).resizable().frame(width: 420, height: 400)
     }
 }
 

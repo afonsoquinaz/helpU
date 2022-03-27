@@ -1,8 +1,15 @@
-//
-//  User.swift
-//  helpU
-//
-//  Created by Afonso Quinaz on 25/03/2022.
-//
+
 
 import Foundation
+import SwiftUI
+import AVFoundation
+
+
+struct User: Identifiable {
+
+    var id: String
+    var userId : String
+    var needs: [Need]
+    var helps: [Help]
+    
+}

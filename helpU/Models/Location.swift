@@ -1,8 +1,17 @@
-//
-//  Location.swift
-//  helpU
-//
-//  Created by Afonso Quinaz on 26/03/2022.
-//
+
 
 import Foundation
+import SwiftUI
+import AVFoundation
+
+
+struct Location : Identifiable {
+    
+    var id: String
+    var userId: String
+    var lat: Double
+    var long: Double
+    var textPost: String
+
+}
+

@@ -1,8 +1,14 @@
-//
-//  app.swift
-//  helpU
-//
-//  Created by Afonso Quinaz on 25/03/2022.
-//
+
 
 import Foundation
+import SwiftUI
+import AVFoundation
+
+
+struct app {
+
+    
+    func hello() -> String{
+        return "hello"
+    }
+}
